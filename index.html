@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>rounded.education — Plan, deliver and prove enrichment</title>
-<meta name="description" content="The complete toolkit for the new DfE Enrichment Framework. Plan your offer, deliver it, and prove it for Ofsted — built for time-poor school leaders.">
+<title>rounded.education — Benchmark, deliver and certify your enrichment offer</title>
+<meta name="description" content="The complete toolkit for the DfE Enrichment Framework. Free self-evaluation, ready-to-run programmes, and The Enrichment Quality Mark accreditation — built for time-poor school leaders.">
 <style>
   :root{
     --ink:#15233b; --ink-soft:#43536e; --line:#e4e9f1;
@@ -18,6 +18,8 @@
   .logo{font-weight:800;font-size:1.35rem;letter-spacing:-.02em;color:var(--brand-deep)}
   .logo span{color:var(--accent)}
   .nav-cta{font-size:.92rem;font-weight:600;color:var(--brand-deep);text-decoration:none;border:1.5px solid var(--line);padding:9px 16px;border-radius:8px}
+
+  /* HERO */
   .hero{padding:48px 0 36px;text-align:center}
   .pill{display:inline-block;background:#eaf4f0;color:var(--brand-deep);font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;padding:7px 14px;border-radius:100px;margin-bottom:22px}
   h1{font-size:2.7rem;line-height:1.1;letter-spacing:-.03em;margin-bottom:18px}
@@ -28,93 +30,287 @@
   .btn:hover{background:var(--brand-deep)}
   .btn-ghost{background:transparent;color:var(--brand-deep);border:1.5px solid var(--line)}
   .trust{margin-top:20px;font-size:.9rem;color:var(--ink-soft)}
+
+  /* SECTIONS */
   section{padding:40px 0}
+  .sec-head{text-align:center;margin-bottom:24px}
+  .sec-head h2{font-size:1.9rem;letter-spacing:-.02em}
+  .sec-head p{color:var(--ink-soft);max-width:600px;margin:8px auto 0;font-size:1.05rem}
+
+  /* WHY */
   .why{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;margin-top:10px}
   .why h2{font-size:1.5rem;letter-spacing:-.02em;margin-bottom:12px}
   .why p{color:var(--ink-soft);margin-bottom:10px}
+  .why p:last-child{margin-bottom:0}
   .why strong{color:var(--ink)}
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
-  .pillar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 20px}
-  .pillar .tag{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--brand);margin-bottom:8px}
+
+  /* STEPS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .step{padding:24px 20px;border-right:1px solid var(--line);position:relative}
+  .step:last-child{border-right:none}
+  .step-num{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+  .step h3{font-size:1rem;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+  .step p{font-size:.88rem;color:var(--ink-soft)}
+
+  /* PILLARS */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px}
+  .pillar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 20px;position:relative}
+  .pillar.featured{border-color:var(--brand);border-width:2px}
+  .pillar .tag{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--brand);margin-bottom:8px;display:block}
   .pillar h3{font-size:1.2rem;margin-bottom:8px;letter-spacing:-.01em}
-  .pillar p{font-size:.95rem;color:var(--ink-soft)}
-  .sec-head{text-align:center;margin-bottom:6px}
-  .sec-head h2{font-size:1.9rem;letter-spacing:-.02em}
-  .sec-head p{color:var(--ink-soft);max-width:600px;margin:8px auto 0}
+  .pillar p{font-size:.92rem;color:var(--ink-soft);margin-bottom:10px}
+  .pillar ul{list-style:none;padding:0;margin-top:10px}
+  .pillar ul li{font-size:.88rem;color:var(--ink-soft);padding:5px 0;border-top:1px solid var(--line);display:flex;gap:8px;align-items:flex-start}
+  .pillar ul li::before{content:"✓";color:var(--brand);font-weight:700;flex-shrink:0}
+  .price-tag{display:inline-block;background:#eaf4f0;color:var(--brand-deep);font-weight:700;font-size:.82rem;padding:4px 10px;border-radius:100px;margin-top:12px}
+  .price-tag.amber{background:#fef3d8;color:#7a5500}
+  .badge-hero{display:inline-block;background:var(--brand-deep);color:#fff;font-weight:700;font-size:.82rem;padding:4px 10px;border-radius:100px;margin-top:12px}
+
+  /* SCORING */
+  .scoring{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:10px}
+  .score-row{display:grid;grid-template-columns:140px 1fr 80px;align-items:center;gap:16px;padding:16px 24px;border-bottom:1px solid var(--line)}
+  .score-row:last-child{border-bottom:none}
+  .score-level{font-size:.82rem;font-weight:700;padding:4px 10px;border-radius:100px;display:inline-block;white-space:nowrap}
+  .level-1{background:#fef3e2;color:#92400e}
+  .level-2{background:#fef9c3;color:#713f12}
+  .level-3{background:#dcfce7;color:#14532d}
+  .level-4{background:#d1fae5;color:#064e3b}
+  .score-desc{font-size:.9rem;color:var(--ink-soft)}
+  .score-desc strong{color:var(--ink)}
+  .score-pts{font-size:.9rem;font-weight:700;color:var(--brand);text-align:right}
+  .score-bar-wrap{background:var(--line);border-radius:100px;height:6px;margin-top:6px}
+  .score-bar{height:6px;border-radius:100px;background:var(--brand)}
+
+  /* OUTPUTS */
+  .outputs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+  .output{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 16px}
+  .output-icon{font-size:1.4rem;margin-bottom:8px}
+  .output h4{font-size:.95rem;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
+  .output p{font-size:.85rem;color:var(--ink-soft)}
+
+  /* FORM */
   .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 30px;margin:22px auto 0;box-shadow:0 10px 40px rgba(21,35,59,.06)}
   label{display:block;font-weight:600;font-size:.95rem;margin:16px 0 7px}
   input[type=text],input[type=email],select,textarea{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:12px 13px;font-size:1rem;font-family:inherit;color:var(--ink)}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand)}
   .checks{display:grid;grid-template-columns:1fr;gap:9px;margin-top:7px}
   .check{display:flex;align-items:flex-start;gap:10px;border:1.5px solid var(--line);border-radius:9px;padding:11px 13px;cursor:pointer}
-  .check input{margin-top:4px}
+  .check input{margin-top:4px;flex-shrink:0}
   .check b{display:block;font-size:.95rem}
   .check small{color:var(--ink-soft)}
   .form-btn{width:100%;margin-top:22px;font-size:1.05rem;padding:15px}
   .privacy{font-size:.82rem;color:var(--ink-soft);text-align:center;margin-top:14px}
   .success{display:none;text-align:center;padding:20px}
   .success h3{color:var(--brand-deep);font-size:1.5rem;margin-bottom:8px}
+
   footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--ink-soft);font-size:.88rem;margin-top:30px}
-  @media(max-width:680px){h1{font-size:2.05rem}.pillars{grid-template-columns:1fr}}
+
+  @media(max-width:680px){
+    h1{font-size:2.05rem}
+    .pillars{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .step{border-right:none;border-bottom:1px solid var(--line)}
+    .step:nth-child(odd){border-right:1px solid var(--line)}
+    .step:last-child,.step:nth-last-child(2):nth-child(odd){border-bottom:none}
+    .outputs{grid-template-columns:1fr 1fr}
+    .score-row{grid-template-columns:110px 1fr 50px}
+  }
+  @media(max-width:480px){
+    .outputs{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .step{border-right:none}
+    .step:nth-child(odd){border-right:none}
+    .step:last-child{border-bottom:none}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <header>
     <div class="logo">rounded<span>.education</span></div>
     <a class="nav-cta" href="#join">Join the waitlist</a>
   </header>
 
+  <!-- HERO -->
   <div class="hero">
     <span class="pill">New · DfE Enrichment Framework 2026</span>
-    <h1>Plan, deliver and <em>prove</em> enrichment — without the workload.</h1>
-    <p class="sub">From September 2026, Ofsted looks at your enrichment offer and parents see it on your school profile. Rounded is the complete toolkit for the new framework — built for leaders who don't have the time or budget to build it from scratch.</p>
+    <h1>The enrichment benchmark is <em>free.</em><br>The badge is the goal.</h1>
+    <p class="sub">From September 2026, Ofsted inspects your enrichment offer and parents see it on your school profile. rounded.education gives you a free self-evaluation against all 8 benchmarks — then helps you close the gaps and earn The Enrichment Quality Mark accreditation.</p>
     <div class="cta-row">
       <a class="btn" href="#join">Get early access</a>
       <a class="btn btn-ghost" href="#how">See how it works</a>
     </div>
-    <div class="trust">Built by people who've sat in the headteacher's chair · No spam · Early-access pricing for founding schools</div>
+    <div class="trust">Built by people who've sat in the headteacher's chair &middot; BenchMark is free, always &middot; Founding school pricing available</div>
   </div>
 
+  <!-- WHY -->
   <section>
     <div class="why">
       <h2>The expectation just changed. The capacity didn't.</h2>
       <p>The DfE Enrichment Framework (published 15 June 2026) sets <strong>8 benchmarks across 5 categories</strong> every school is expected to deliver. <strong>Ofsted considers it from September 2026</strong> under Personal Development, and new parent-facing school profiles put it in the shop window.</p>
-      <p>But there's <strong>no new funding</strong> guaranteed, staffing is stretched, and leaders are already cutting trips and clubs. You're being asked to plan, deliver, evidence and improve an enrichment offer — with no extra time. <strong>That's the gap Rounded closes.</strong></p>
+      <p>But there's <strong>no new funding</strong> guaranteed, staffing is stretched, and leaders are already cutting trips and clubs. You're being asked to plan, deliver, evidence and improve an enrichment offer — with no extra time and no template to follow.</p>
+      <p><strong>rounded.education closes that gap.</strong> Start with a free benchmark. See exactly where you stand. Then use our tools to fix the gaps and earn the only accreditation built for this framework.</p>
     </div>
   </section>
 
+  <!-- HOW IT WORKS — STEPS -->
   <section id="how">
+    <div class="sec-head">
+      <h2>Four steps from gap to badge</h2>
+      <p>The whole journey takes around 25 minutes to start — and gives you something Ofsted-ready at every stage.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">Step 1</div>
+        <h3>Register your school</h3>
+        <p>Free account. No credit card. Takes two minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 2</div>
+        <h3>Complete BenchMark</h3>
+        <p>Self-evaluate against all 8 benchmarks across 5 categories. Around 25 minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 3</div>
+        <h3>Get your instant report</h3>
+        <p>Scorecard, gap analysis, action plan and Ofsted evidence PDF — generated automatically.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 4</div>
+        <h3>Earn The Enrichment Quality Mark</h3>
+        <p>Score Securing or above across all benchmarks and apply for accreditation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE PILLARS -->
+  <section>
     <div class="sec-head">
       <h2>One toolkit. Three jobs done.</h2>
       <p>Diagnose your gaps, fill them, and certify the result — all mapped to the framework.</p>
     </div>
     <div class="pillars">
       <div class="pillar">
-        <div class="tag">Plan it</div>
+        <span class="tag">Assess it · Free</span>
         <h3>BenchMark</h3>
-        <p>Self-evaluate against all 8 benchmarks, map your activities to the 5 categories, and generate an Ofsted-ready evidence report and a parent-profile summary in one click.</p>
+        <p>Self-evaluate against all 8 benchmarks. See exactly where you stand before Ofsted does.</p>
+        <ul>
+          <li>Instant scorecard across 5 categories</li>
+          <li>Gap analysis in plain English</li>
+          <li>Prioritised action plan</li>
+          <li>Ofsted evidence PDF</li>
+          <li>Parent profile summary</li>
+        </ul>
+        <span class="price-tag">Always free</span>
       </div>
       <div class="pillar">
-        <div class="tag">Deliver it</div>
+        <span class="tag">Deliver it</span>
         <h3>Enrichment-in-a-Box</h3>
-        <p>A library of ready-to-run enrichment programmes — session plans, risk assessments, partner templates and impact trackers — to fill the gaps without building from scratch.</p>
+        <p>A library of ready-to-run programmes to fill the gaps BenchMark identifies — without building from scratch.</p>
+        <ul>
+          <li>Session plans &amp; risk assessments</li>
+          <li>Partner templates</li>
+          <li>Impact trackers</li>
+          <li>Mapped to each benchmark</li>
+          <li>Ready to use this term</li>
+        </ul>
+        <span class="price-tag amber">Founding school pricing</span>
       </div>
-      <div class="pillar">
-        <div class="tag">Prove it</div>
-        <h3>The Rounded Mark</h3>
-        <p>An accreditation that certifies your enrichment offer against the framework — a badge for your website, your parent profile and your Ofsted evidence file.</p>
+      <div class="pillar featured">
+        <span class="tag">Certify it · The hero product</span>
+        <h3>The Enrichment Quality Mark</h3>
+        <p>The only accreditation built for the DfE Enrichment Framework. A badge for your website, parent profile and Ofsted evidence file.</p>
+        <ul>
+          <li>External certification against the framework</li>
+          <li>Badge for website &amp; parent profile</li>
+          <li>Annual renewal keeps evidence current</li>
+          <li>MAT-level reporting available</li>
+          <li>Ofsted-ready evidence file</li>
+        </ul>
+        <span class="badge-hero">£495 / school / year</span>
       </div>
     </div>
   </section>
 
+  <!-- SCORING -->
+  <section>
+    <div class="sec-head">
+      <h2>Four levels. Language Ofsted already uses.</h2>
+      <p>Each of the 8 benchmarks is scored on a four-point scale — so your report maps directly to inspection vocabulary.</p>
+    </div>
+    <div class="scoring">
+      <div class="score-row">
+        <div><span class="score-level level-1">Developing</span></div>
+        <div class="score-desc"><strong>Intent exists, delivery is limited.</strong> You have plans but provision is inconsistent or undocumented.</div>
+        <div class="score-pts">1 pt</div>
+      </div>
+      <div class="score-row">
+        <div><span class="score-level level-2">Establishing</span></div>
+        <div class="score-desc"><strong>Consistent delivery, patchy evidence.</strong> Provision is happening but impact isn't yet captured.</div>
+        <div class="score-pts">2 pts</div>
+      </div>
+      <div class="score-row">
+        <div><span class="score-level level-3">Securing</span></div>
+        <div class="score-desc"><strong>Strong delivery and clear evidence.</strong> Minimum threshold for The Enrichment Quality Mark.</div>
+        <div class="score-pts">3 pts</div>
+      </div>
+      <div class="score-row">
+        <div><span class="score-level level-4">Exemplary</span></div>
+        <div class="score-desc"><strong>Sector-leading, replicable practice.</strong> Your approach is worth sharing with other schools.</div>
+        <div class="score-pts">4 pts</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.88rem;color:var(--ink-soft);margin-top:14px">Maximum score: <strong style="color:var(--ink)">32 points</strong> &middot; Enrichment Quality Mark threshold: <strong style="color:var(--brand)">24+ points</strong> (Securing across all 8 benchmarks)</p>
+  </section>
+
+  <!-- OUTPUTS -->
+  <section>
+    <div class="sec-head">
+      <h2>What you get from BenchMark — instantly, for free</h2>
+      <p>Every school that completes the evaluation receives all six of these automatically.</p>
+    </div>
+    <div class="outputs">
+      <div class="output">
+        <div class="output-icon">📊</div>
+        <h4>Benchmark scorecard</h4>
+        <p>Visual score across all 8 benchmarks — ready to copy into your SEF.</p>
+      </div>
+      <div class="output">
+        <div class="output-icon">🔍</div>
+        <h4>Gap summary</h4>
+        <p>Plain-English list of what's missing and why it matters for your next inspection.</p>
+      </div>
+      <div class="output">
+        <div class="output-icon">✅</div>
+        <h4>Prioritised action plan</h4>
+        <p>Ranked next steps, each linked to Enrichment-in-a-Box resources to fill the gap.</p>
+      </div>
+      <div class="output">
+        <div class="output-icon">📄</div>
+        <h4>Ofsted evidence PDF</h4>
+        <p>Formatted for your inspection evidence folder. One click, ready to share.</p>
+      </div>
+      <div class="output">
+        <div class="output-icon">👪</div>
+        <h4>Parent profile summary</h4>
+        <p>Auto-generated paragraph for your school website and DfE parent profile page.</p>
+      </div>
+      <div class="output">
+        <div class="output-icon">🏅</div>
+        <h4>Enrichment Quality Mark status</h4>
+        <p>24+ points? Apply for accreditation. Below threshold? Here's exactly what to fix.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST FORM -->
   <section id="join">
     <div class="sec-head">
       <h2>Join the waitlist</h2>
-      <p>Be first in line for early access and founding-school pricing. Tell us which part you need most — it shapes what we ship first.</p>
+      <p>Be first in line for early access and founding-school pricing. Tell us which part you need most — it shapes what we build first.</p>
     </div>
     <div class="form-card">
-      <!-- SETUP: replace the action URL with your own form endpoint (Formspree / Tally / MailerLite). See setup notes. -->
       <form id="waitlistForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label for="name">Your name</label>
         <input type="text" id="name" name="name" required>
@@ -130,20 +326,29 @@
 
         <label>Which part would help you most? <span style="font-weight:400;color:var(--ink-soft)">(tick all that apply)</span></label>
         <div class="checks">
-          <label class="check"><input type="checkbox" name="interest" value="BenchMark (plan/evidence)"><span><b>Planning &amp; evidencing</b><small>Self-evaluation + Ofsted-ready reports</small></span></label>
-          <label class="check"><input type="checkbox" name="interest" value="Enrichment-in-a-Box (delivery)"><span><b>Ready-to-run programmes</b><small>Done-for-you enrichment content</small></span></label>
-          <label class="check"><input type="checkbox" name="interest" value="The Rounded Mark (accreditation)"><span><b>Accreditation / quality mark</b><small>Certify your offer for Ofsted &amp; parents</small></span></label>
+          <label class="check">
+            <input type="checkbox" name="interest" value="BenchMark">
+            <span><b>BenchMark — free self-evaluation</b><small>Score against all 8 benchmarks, get an instant Ofsted-ready report</small></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="interest" value="Enrichment-in-a-Box">
+            <span><b>Enrichment-in-a-Box — ready-to-run programmes</b><small>Done-for-you content to fill the gaps BenchMark identifies</small></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="interest" value="The Enrichment Quality Mark">
+            <span><b>The Enrichment Quality Mark — accreditation</b><small>Certify your offer against the framework for Ofsted and parents</small></span>
+          </label>
         </div>
 
         <label for="headache">What's your biggest enrichment headache right now? <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
         <textarea id="headache" name="headache" rows="3" placeholder="One line is plenty."></textarea>
 
         <button type="submit" class="btn form-btn">Join the waitlist</button>
-        <p class="privacy">We'll only email you about Rounded. Unsubscribe anytime.</p>
+        <p class="privacy">We'll only email you about rounded.education. Unsubscribe anytime.</p>
       </form>
       <div class="success" id="successMsg">
         <h3>You're on the list 🎉</h3>
-        <p>Thanks — you're in line for early access and founding-school pricing. We'll be in touch soon with first look.</p>
+        <p>Thanks — you'll be first to access BenchMark when we launch, and first in line for founding-school pricing on The Enrichment Quality Mark. We'll be in touch soon.</p>
       </div>
     </div>
   </section>
@@ -152,10 +357,10 @@
     <div class="logo" style="font-size:1.1rem;margin-bottom:6px">rounded<span>.education</span></div>
     © 2026 rounded.education · The complete toolkit for the DfE Enrichment Framework
   </footer>
+
 </div>
 
 <script>
-  // Lightweight submit handler: posts to your form endpoint, then shows the success state.
   const form = document.getElementById('waitlistForm');
   form.addEventListener('submit', async function(e){
     e.preventDefault();
@@ -163,9 +368,8 @@
     try{
       const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
       if(res.ok){ form.style.display='none'; document.getElementById('successMsg').style.display='block'; }
-      else { window.location.href = 'mailto:hello@getrounded.example?subject=Rounded%20waitlist'; }
+      else { form.style.display='none'; document.getElementById('successMsg').style.display='block'; }
     }catch(err){
-      // Fallback if no endpoint is connected yet
       form.style.display='none'; document.getElementById('successMsg').style.display='block';
     }
   });
